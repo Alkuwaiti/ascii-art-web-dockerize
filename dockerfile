@@ -19,3 +19,5 @@ EXPOSE 8080
 CMD ["./ascii-art-web"]
 
 # Mistake: I was using a base image, but then using another base image (alpine) which only had the binary was then run, but because the binary didn't have access to the html from the original source code, it couldn't find it. so i got rid of the second lightweight base image all together.
+
+# Also, remember to run 8080:8080 both ports, of the docker and the localhost
