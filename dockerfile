@@ -17,3 +17,5 @@ EXPOSE 8080
 
 # Command to run the executable
 CMD ["./ascii-art-web"]
+
+# Mistake: I was using a base image, but then using another base image (alpine) which only had the binary was then run, but because the binary didn't have access to the html from the original source code, it couldn't find it. so i got rid of the second lightweight base image all together.
